@@ -9,6 +9,10 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
+var dbUrl = process.env.MONGOLAB_URI;
+
+console.log (dbUrl);
+
 var Message = mongoose.model('Message', {
   name: String,
   message: String
