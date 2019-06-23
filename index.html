@@ -39,7 +39,7 @@
       $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
     }
     function getMessages(){
-      $.get('localhost:' + process.env.PORT + '/messages', (data) => {
+      $.get('https://sample-chat-arcadio.herokuapp.com/messages', (data) => {
         data.forEach(addMessages);
       })
     }
