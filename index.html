@@ -39,7 +39,8 @@
       $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
     }
     function getMessages(){
-      $.get('http://localhost:' + process.env.PORT + '/messages', (data) => {
+      var url = 'http://localhost:' + process.env.PORT + '/messages'
+      $.get(url, (data) => {
         data.forEach(addMessages);
       })
     }
