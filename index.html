@@ -39,13 +39,13 @@
       $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
     }
     function getMessages(){
-      $.get('http://localhost:process.env.PORT/messages', (data) => {
+      $.get('http://localhost:' + process.env.PORT + '/messages', (data) => {
         data.forEach(addMessages);
       })
     }
 
     function postMessage(message){
-      $.post('http://localhost:process.env.PORT/messages', message)
+      $.post('http://localhost:' + process.env.PORT + '/messages', message)
     }
   </script>
 </body>
